@@ -2,6 +2,11 @@ package com.ssa.coding;
 
 import java.util.LinkedList;
 
+/**
+ * 
+ * 题目：输入一个链表的头结点，从尾到头反过来打印出每个结点的值。
+ *
+ */
 public class Coding3 {
 	public static void main(String[] args) {
 		ListNode node1 = new ListNode(1, null);

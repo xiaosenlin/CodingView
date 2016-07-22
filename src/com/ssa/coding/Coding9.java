@@ -1,22 +1,28 @@
 package com.ssa.coding;
 
+/**
+ * 
+ * 题目：实现函数 double Power （ double base， int exponent），求 base 的 exponent
+ * 次方。不得使用库函数，同时不需要考虑大数问题。
+ *
+ */
 public class Coding9 {
 	public static void main(String[] args) throws Exception {
-		System.out.println(power(3.0,7));
-		System.out.println(1.0/9);
+		System.out.println(power(3.0, 7));
+		System.out.println(1.0 / 9);
 	}
 
 	public static double power(double base, int exponent) throws Exception {
-		if(equal(base, 0.0) && (exponent<0)){
+		if (equal(base, 0.0) && (exponent < 0)) {
 			throw new Exception("0的负数次幂没有意义");
 		}
 		double result = 1.0;
-		if(exponent<0) {
-			result = 1/(powerWithExponent2(base, -exponent));
+		if (exponent < 0) {
+			result = 1 / (powerWithExponent2(base, -exponent));
 		} else {
 			result = powerWithExponent2(base, exponent);
 		}
-		
+
 		return result;
 	}
 
@@ -37,21 +43,21 @@ public class Coding9 {
 	}
 
 	public static double powerWithExponent2(double base, int exponent) {
-		if(0==exponent) {
+		if (0 == exponent) {
 			return 1;
 		}
-		if(1==exponent) {
+		if (1 == exponent) {
 			return base;
 		}
-		double result = powerWithExponent2(base, exponent>>1);
-		result *=result;
-		if((exponent & 0x1) == 1) {
+		double result = powerWithExponent2(base, exponent >> 1);
+		result *= result;
+		if ((exponent & 0x1) == 1) {
 			result = result * base;
 		}
-		
+
 		return result;
 	}
-	
+
 	public static boolean equal(double num1, double num2) {
 		if ((num1 - num2 > -10e-7) && (num1 - num2 < 10e-7)) {
 			return true;

@@ -1,5 +1,10 @@
 package com.ssa.coding;
 
+/**
+ * 
+ * 题目：请实现一个函数，把字符串中的每个空格替换成“ %20”。
+ *
+ */
 public class Coding2 {
 	public static void main(String[] args) {
 		String str = "We are happy!";

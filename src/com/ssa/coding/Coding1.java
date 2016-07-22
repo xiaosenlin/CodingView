@@ -1,5 +1,11 @@
 package com.ssa.coding;
 
+/**
+ * 
+ * 题目描述： 一个二维数组，每一行从左到右递增，每一列从上到下递增．输
+ * 入一个二维数组和一个整数，判断数组中是否含有整数。
+ *
+ */
 public class Coding1 {
 	public static void main(String[] args) {
 		int[][] matrix = { { 1, 2, 8, 9 }, { 2, 4, 9, 12 }, { 4, 7, 10, 13 },

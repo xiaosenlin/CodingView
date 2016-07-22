@@ -1,9 +1,14 @@
 package com.ssa.coding;
 
+/**
+ * 
+ * 题目：写一个函数，输入 n，求斐波那契数列的第 n 项。
+ *
+ */
 public class Coding7 {
 	public static void main(String[] args) {
 		System.out.println(fibonacci2(10));
-		//System.out.println(Integer.MIN_VALUE);
+		// System.out.println(Integer.MIN_VALUE);
 	}
 
 	// 递归
@@ -28,12 +33,12 @@ public class Coding7 {
 		if (n == 1) {
 			return fibTwo;
 		}
-		for (int i = 2; i <=n; i++) {
+		for (int i = 2; i <= n; i++) {
 			fibN = fibOne + fibTwo;
 			fibOne = fibTwo;
 			fibTwo = fibN;
 		}
-		
+
 		return fibN;
 	}
 }

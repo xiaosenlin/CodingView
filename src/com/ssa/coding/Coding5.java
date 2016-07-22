@@ -2,6 +2,12 @@ package com.ssa.coding;
 
 import java.util.Stack;
 
+/**
+ * 
+ * 题目描述：用两个栈实现一个队列，实现对了的两个函数 appendTail 和
+ * deleteHead，分别完成在队列尾插入结点和在队列头部删除结点的功能。
+ *
+ */
 public class Coding5 {
 	public static void main(String[] args) throws Exception {
 		Queue<Integer> queue = new Queue<Integer>();
