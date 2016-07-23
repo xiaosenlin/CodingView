@@ -42,8 +42,8 @@ public class Coding3 {
 }
 
 class ListNode {
-	private int value;
-	private ListNode nextNode;
+	public int value;
+	public ListNode nextNode;
 
 	public int getValue() {
 		return value;
