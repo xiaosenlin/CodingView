@@ -13,7 +13,7 @@ public class Coding22 {
 		int[] sequence1 = { 7, 4, 6, 5 };
 		int[] sequence2 = { 5, 7, 6, 8 };
 		int[] sequence3 = { 9, 11, 10, 8 };
-		System.out.println(verifySquenceOfBST(sequence3));
+		System.out.println(verifySquenceOfBST(sequence));
 	}
 
 	public static boolean verifySquenceOfBST(int[] sequence) {
@@ -27,7 +27,7 @@ public class Coding22 {
 			if (sequence[i] > root) {
 				break;
 			}
-			splitIndex = i + 1;
+			splitIndex = i+1;
 		}
 		for (int j = splitIndex; j < sequence.length - 1; j++) {
 			if (sequence[j] < root) {
@@ -41,8 +41,8 @@ public class Coding22 {
 		}
 		boolean right = true;
 		if (splitIndex < sequence.length - 1) {
-			right = verifySquenceOfBST(Arrays.copyOfRange(sequence, splitIndex,
-					sequence.length - 1));
+			right = verifySquenceOfBST(Arrays.copyOfRange(sequence, splitIndex+1,
+					sequence.length));
 		}
 
 		return (right && left);
